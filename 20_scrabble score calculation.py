@@ -17,4 +17,4 @@ word = input('Enter any word: ').upper()
 for i in word.split():
     print(
         f"Your score points is {sum([k for i in word for k, v in scrabble_dict.items() if i in v])}")
-    # print({sum([k for i in word for k, v in scrabble_dict_rus.items() if i in v])})
+
