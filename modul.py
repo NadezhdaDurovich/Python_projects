@@ -4,10 +4,10 @@ def read_file(filename): # показаь все контакты
             print(line. strip())
 
 def serch_info(filename): # поиск контакта
-    request = input('Введите критерий поиска:', end='')
+    request = input('Введите критерий поиска:')
     with open(filename, 'r', encoding='utf-8') as data:
         result = [i for i in data if request in i]
-        print(result. strip())
+        print(result)
 
 def export(filename): # экспорт контакта
     request = input(
@@ -19,6 +19,6 @@ def export(filename): # экспорт контакта
                     data1.writelines(i)
 
 def add_data(filename): # добавление контакта
-    contact= input('Введите данные нового абонента: ', end=' ')
+    contact= input('Введите данные нового абонента: ')
     with open(filename, 'a') as data:
         data.writelines(contact.split())
